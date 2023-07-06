@@ -1,0 +1,27 @@
+always {
+    packages {
+        include = [
+            "@Fedora Cloud Server",
+        ];
+    }
+}
+
+format {
+    qcow2 {
+        filename = fedora-cloud.qcow2;
+    }
+
+    vmdk {
+        filename = fedora-cloud.vmdk;
+    }
+
+    vdk {
+        filename = fedora-cloud.vdk;
+    }
+
+    ova {
+        filename = fedora-cloud.ova;
+    }
+}
+
+.include(duplicate=merge) fedora.ucl;
