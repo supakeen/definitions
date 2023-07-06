@@ -1,6 +1,3 @@
-always {
-}
-
 format {
     installer-live {
         packages {
@@ -37,19 +34,5 @@ format {
                 ]
             }
         }
-    }
-}
-
-architecture {
-    x86_64 {
-    }
-
-    aarch64 {
-    }
-
-    ppl64le {
-    }
-
-    s390x {
     }
 }
