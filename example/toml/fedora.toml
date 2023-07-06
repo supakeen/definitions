@@ -13,6 +13,10 @@ filesize = 5000000000
 filename = "disk.vmdk"
 filesize = 2000000000
 
+[format.ova]
+filename = "disk.ova"
+filesize = 2000000000
+
 [format.installer-live.packages]
 include = [ "kernel", "kernel-modules", "kernel-modules-extra", "anaconda", "anaconda-install-env-deps", "anaconda-live", "@anaconda-tools", "aajohan-comfortaa-fonts", "dracut-live", "glibc-all-langpacks", "livesys-scripts",]
 exclude = [ "fcoe-utils", "device-mapper-multipath",]
@@ -26,6 +30,10 @@ include = [ "@Fedora Cloud Server", "chrony", "langpacks-en", "qemu-guest-agent"
 exclude = [ "dracut-config-rescue", "firewalld", "geolite2-city", "geolite2-country", "plymouth",]
 
 [format.vmdk.packages]
+include = [ "@Fedora Cloud Server\"", "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
+exclude = [ "dracut-config-rescue", "etables", "firewalld", "geolite2-city", "geolite2-country", "gobject-introspection", "plymouth", "zram-generator-defaults", "grubby-deprecated", "extlinux-bootloader",]
+
+[format.ova.packages]
 include = [ "@Fedora Cloud Server\"", "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
 exclude = [ "dracut-config-rescue", "etables", "firewalld", "geolite2-city", "geolite2-country", "gobject-introspection", "plymouth", "zram-generator-defaults", "grubby-deprecated", "extlinux-bootloader",]
 

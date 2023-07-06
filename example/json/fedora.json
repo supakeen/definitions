@@ -117,6 +117,31 @@
           "extlinux-bootloader"
         ]
       }
+    },
+    "ova": {
+      "filename": "disk.ova",
+      "filesize": 2000000000,
+      "packages": {
+        "include": [
+          "@Fedora Cloud Server\"",
+          "chrony",
+          "systemd-udev",
+          "langpacks-en",
+          "open-vm-tools"
+        ],
+        "exclude": [
+          "dracut-config-rescue",
+          "etables",
+          "firewalld",
+          "geolite2-city",
+          "geolite2-country",
+          "gobject-introspection",
+          "plymouth",
+          "zram-generator-defaults",
+          "grubby-deprecated",
+          "extlinux-bootloader"
+        ]
+      }
     }
   }
 }
