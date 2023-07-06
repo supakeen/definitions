@@ -69,7 +69,6 @@
       "filesize": 5000000000,
       "packages": {
         "include": [
-          "@Fedora Cloud Server",
           "chrony",
           "langpacks-en",
           "qemu-guest-agent"
@@ -98,7 +97,6 @@
       "filesize": 2000000000,
       "packages": {
         "include": [
-          "@Fedora Cloud Server\"",
           "chrony",
           "systemd-udev",
           "langpacks-en",
@@ -123,7 +121,6 @@
       "filesize": 2000000000,
       "packages": {
         "include": [
-          "@Fedora Cloud Server\"",
           "chrony",
           "systemd-udev",
           "langpacks-en",

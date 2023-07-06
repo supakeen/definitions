@@ -51,7 +51,6 @@ format:
       - grubby-deprecated
       - extlinux-bootloader
       include:
-      - '@Fedora Cloud Server"'
       - chrony
       - systemd-udev
       - langpacks-en
@@ -67,7 +66,6 @@ format:
       - geolite2-country
       - plymouth
       include:
-      - '@Fedora Cloud Server'
       - chrony
       - langpacks-en
       - qemu-guest-agent
@@ -119,7 +117,6 @@ format:
       - grubby-deprecated
       - extlinux-bootloader
       include:
-      - '@Fedora Cloud Server"'
       - chrony
       - systemd-udev
       - langpacks-en

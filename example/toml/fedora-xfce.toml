@@ -30,15 +30,15 @@ include = [ "@core", "chrony", "langpacks-en", "net-tools", "ntfsprogs", "libxcr
 exclude = [ "dracut-config-rescue", "geolite2-city", "geolite2-country", "zram-generator-defaults",]
 
 [format.qcow2.packages]
-include = [ "@Fedora Cloud Server", "chrony", "langpacks-en", "qemu-guest-agent",]
+include = [ "chrony", "langpacks-en", "qemu-guest-agent",]
 exclude = [ "dracut-config-rescue", "firewalld", "geolite2-city", "geolite2-country", "plymouth",]
 
 [format.vmdk.packages]
-include = [ "@Fedora Cloud Server\"", "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
+include = [ "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
 exclude = [ "dracut-config-rescue", "etables", "firewalld", "geolite2-city", "geolite2-country", "gobject-introspection", "plymouth", "zram-generator-defaults", "grubby-deprecated", "extlinux-bootloader",]
 
 [format.ova.packages]
-include = [ "@Fedora Cloud Server\"", "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
+include = [ "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
 exclude = [ "dracut-config-rescue", "etables", "firewalld", "geolite2-city", "geolite2-country", "gobject-introspection", "plymouth", "zram-generator-defaults", "grubby-deprecated", "extlinux-bootloader",]
 
 [format.installer-live.files."/etc/sysconfig/desktop"]

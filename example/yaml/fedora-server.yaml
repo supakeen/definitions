@@ -1,37 +1,12 @@
 always:
   packages:
-    exclude:
-    - autofs
-    - acpid
-    - gimp-help
-    - desktop-backgrounds-basic
-    - xfce4-sensors-plugin
-    - xfce4-eyes-plugin
     include:
-    - '@xfce-desktop-environment'
-    - '@xfce-apps'
-    - '@xfce-extra-plugins'
-    - '@xfce-media'
-    - '@xfce-office'
-    - wget
-    - system-config-printer
+    - '@Fedora Server'
 format:
   installer-live:
     filename: installer.iso
-    files:
-      /etc/sysconfig/desktop:
-        content: 'PREFERRED=/usr/bin/startxfce4
-
-          DISPLAYMANAGER=/usr/sbin/lightdm'
-      /etc/sysconfig/livesys:
-        content: '''livesys_session="xfce"'''
     packages:
       exclude:
-      - '@dial-up'
-      - '@input-methods'
-      - '@standard'
-      - gfs2-utils
-      - reiserfs-utils
       - fcoe-utils
       - device-mapper-multipath
       include:
@@ -53,7 +28,7 @@ format:
         - livesys-late.service
         - tmp.mount
   ova:
-    filename: disk.ova
+    filename: fedora-server.ova
     filesize: 2000000000
     packages:
       exclude:
@@ -73,7 +48,7 @@ format:
       - langpacks-en
       - open-vm-tools
   qcow2:
-    filename: disk.qcow2
+    filename: fedora-server.qcow2
     filesize: 5000000000
     packages:
       exclude:
@@ -93,6 +68,8 @@ format:
         - cloud-config.service
         - cloud-final.service
         - cloud-init-local.service
+  vdk:
+    filename: fedora-server.vdk
   vhd:
     filename: disk.vhd
     filesize: 2000000000
@@ -119,7 +96,7 @@ format:
         enable:
         - sshd.service
   vmdk:
-    filename: disk.vmdk
+    filename: fedora-server.vmdk
     filesize: 2000000000
     packages:
       exclude:

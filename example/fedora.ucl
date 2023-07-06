@@ -82,7 +82,6 @@ format {
 
         packages = {
             include = [
-                "@Fedora Cloud Server",
                 chrony,
                 langpacks-en,
                 qemu-guest-agent,
@@ -116,7 +115,6 @@ format {
 
         packages = {
             include = [
-                @Fedora Cloud Server",
                 chrony,
                 systemd-udev,
                 langpacks-en,
@@ -144,7 +142,6 @@ format {
 
         packages = {
             include = [
-                @Fedora Cloud Server",
                 chrony,
                 systemd-udev,
                 langpacks-en,
