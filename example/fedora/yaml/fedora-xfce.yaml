@@ -54,7 +54,7 @@ format:
         - tmp.mount
   ova:
     filename: disk.ova
-    filesize: 2000000000
+    filesize: 2147483648
     packages:
       exclude:
       - dracut-config-rescue
@@ -74,7 +74,7 @@ format:
       - open-vm-tools
   qcow2:
     filename: disk.qcow2
-    filesize: 5000000000
+    filesize: 5368709120
     packages:
       exclude:
       - dracut-config-rescue
@@ -95,7 +95,7 @@ format:
         - cloud-init-local.service
   vhd:
     filename: disk.vhd
-    filesize: 2000000000
+    filesize: 2147483648
     packages:
       exclude:
       - dracut-config-rescue
@@ -120,7 +120,7 @@ format:
         - sshd.service
   vmdk:
     filename: disk.vmdk
-    filesize: 2000000000
+    filesize: 2147483648
     packages:
       exclude:
       - dracut-config-rescue

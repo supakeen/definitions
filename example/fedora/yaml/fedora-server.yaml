@@ -29,7 +29,7 @@ format:
         - tmp.mount
   ova:
     filename: fedora-server.ova
-    filesize: 2000000000
+    filesize: 2147483648
     packages:
       exclude:
       - dracut-config-rescue
@@ -49,7 +49,7 @@ format:
       - open-vm-tools
   qcow2:
     filename: fedora-server.qcow2
-    filesize: 5000000000
+    filesize: 5368709120
     packages:
       exclude:
       - dracut-config-rescue
@@ -72,7 +72,7 @@ format:
     filename: fedora-server.vdk
   vhd:
     filename: disk.vhd
-    filesize: 2000000000
+    filesize: 2147483648
     packages:
       exclude:
       - dracut-config-rescue
@@ -97,7 +97,7 @@ format:
         - sshd.service
   vmdk:
     filename: fedora-server.vmdk
-    filesize: 2000000000
+    filesize: 2147483648
     packages:
       exclude:
       - dracut-config-rescue

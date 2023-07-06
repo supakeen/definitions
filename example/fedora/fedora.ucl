@@ -40,7 +40,7 @@ format {
 
     vhd {
         filename = disk.vhd;
-        filesize = 2G
+        filesize = 2Gb
 
         packages {
             include = [
@@ -78,7 +78,7 @@ format {
 
     qcow2 {
         filename = disk.qcow2;
-        filesize = 5G
+        filesize = 5Gb
 
         packages = {
             include = [
@@ -111,7 +111,7 @@ format {
 
     vmdk {
         filename = disk.vmdk;
-        filesize = 2G
+        filesize = 2Gb
 
         packages = {
             include = [
@@ -138,7 +138,7 @@ format {
 
     ova {
         filename = disk.ova;
-        filesize = 2G
+        filesize = 2Gb
 
         packages = {
             include = [

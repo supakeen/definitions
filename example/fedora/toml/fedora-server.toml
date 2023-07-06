@@ -3,25 +3,25 @@ include = [ "@Fedora Server",]
 
 [format.qcow2]
 filename = "fedora-server.qcow2"
-filesize = 5000000000
+filesize = 5368709120
 
 [format.vmdk]
 filename = "fedora-server.vmdk"
-filesize = 2000000000
+filesize = 2147483648
 
 [format.vdk]
 filename = "fedora-server.vdk"
 
 [format.ova]
 filename = "fedora-server.ova"
-filesize = 2000000000
+filesize = 2147483648
 
 [format.installer-live]
 filename = "installer.iso"
 
 [format.vhd]
 filename = "disk.vhd"
-filesize = 2000000000
+filesize = 2147483648
 
 [format.qcow2.packages]
 include = [ "chrony", "langpacks-en", "qemu-guest-agent",]

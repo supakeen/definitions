@@ -6,19 +6,19 @@ filename = "installer.iso"
 
 [format.vhd]
 filename = "disk.vhd"
-filesize = 2000000000
+filesize = 2147483648
 
 [format.qcow2]
 filename = "disk.qcow2"
-filesize = 5000000000
+filesize = 5368709120
 
 [format.vmdk]
 filename = "disk.vmdk"
-filesize = 2000000000
+filesize = 2147483648
 
 [format.ova]
 filename = "disk.ova"
-filesize = 2000000000
+filesize = 2147483648
 
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]

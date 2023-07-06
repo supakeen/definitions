@@ -9,7 +9,7 @@
   "format": {
     "qcow2": {
       "filename": "fedora-cloud.qcow2",
-      "filesize": 5000000000,
+      "filesize": 5368709120,
       "packages": {
         "include": [
           "chrony",
@@ -37,7 +37,7 @@
     },
     "vmdk": {
       "filename": "fedora-cloud.vmdk",
-      "filesize": 2000000000,
+      "filesize": 2147483648,
       "packages": {
         "include": [
           "chrony",
@@ -64,7 +64,7 @@
     },
     "ova": {
       "filename": "fedora-cloud.ova",
-      "filesize": 2000000000,
+      "filesize": 2147483648,
       "packages": {
         "include": [
           "chrony",
@@ -119,7 +119,7 @@
     },
     "vhd": {
       "filename": "disk.vhd",
-      "filesize": 2000000000,
+      "filesize": 2147483648,
       "packages": {
         "include": [
           "@core",
