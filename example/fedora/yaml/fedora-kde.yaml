@@ -24,7 +24,7 @@ always:
     - mediawriter
 format:
   installer-live:
-    filename: installer.iso
+    filename: fedora-kde.iso
     files:
       /etc/sysconfig/livesys:
         content: '''livesys_session="kde"'''

@@ -3,7 +3,7 @@ include = [ "@kde-product-environment", "@firefox", "@kde-apps", "@kde-media", "
 exclude = [ "@admin-tools", "tracker-miners", "tracker", "ktorrent", "digikam", "kipi-plugins", "krusader", "k3b",]
 
 [format.installer-live]
-filename = "installer.iso"
+filename = "fedora-kde.iso"
 
 [format.vhd]
 filename = "disk.vhd"

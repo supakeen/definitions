@@ -29,6 +29,7 @@
   },
   "format": {
     "installer-live": {
+      "filename": "fedora-kde.iso",
       "packages": {
         "exclude": [
           "@dial-up",
@@ -64,7 +65,6 @@
           "content": "'livesys_session=\"kde\"'"
         }
       },
-      "filename": "installer.iso",
       "systemd": {
         "services": {
           "enable": [

@@ -3,7 +3,7 @@ include = [ "@xfce-desktop-environment", "@xfce-apps", "@xfce-extra-plugins", "@
 exclude = [ "autofs", "acpid", "gimp-help", "desktop-backgrounds-basic", "xfce4-sensors-plugin", "xfce4-eyes-plugin",]
 
 [format.installer-live]
-filename = "installer.iso"
+filename = "fedora-xfce.iso"
 
 [format.vhd]
 filename = "disk.vhd"

@@ -25,6 +25,8 @@ always {
 
 format {
     installer-live {
+        filename = fedora-xfce.iso;
+
         packages {
             exclude = [
                 @dial-up,

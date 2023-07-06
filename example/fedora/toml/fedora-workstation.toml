@@ -2,7 +2,7 @@
 include = [ "@workstation-product-environment",]
 
 [format.installer-live]
-filename = "installer.iso"
+filename = "fedora-workstation.iso"
 
 [format.vhd]
 filename = "disk.vhd"

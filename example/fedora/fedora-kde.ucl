@@ -30,6 +30,8 @@ always {
 
 format {
     installer-live {
+        filename = fedora-kde.iso;
+
         packages {
             exclude = [
                 @dial-up,

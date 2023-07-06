@@ -8,6 +8,7 @@
   },
   "format": {
     "installer-live": {
+      "filename": "fedora-workstation.iso",
       "packages": {
         "exclude": [
           "@dial-up",
@@ -37,7 +38,6 @@
           "content": "'livesys_session=\"gnome\"'"
         }
       },
-      "filename": "installer.iso",
       "systemd": {
         "services": {
           "enable": [

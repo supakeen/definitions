@@ -17,7 +17,7 @@ always:
     - system-config-printer
 format:
   installer-live:
-    filename: installer.iso
+    filename: fedora-xfce.iso
     files:
       /etc/sysconfig/desktop:
         content: 'PREFERRED=/usr/bin/startxfce4
