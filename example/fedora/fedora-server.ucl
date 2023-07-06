@@ -24,4 +24,4 @@ format {
     }
 }
 
-.include(duplicate=merge) fedora.ucl;
+.include(duplicate=merge) ./fedora.ucl;
