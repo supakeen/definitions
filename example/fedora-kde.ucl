@@ -32,21 +32,21 @@ format {
     installer-live {
         packages {
             exclude = [
-                "@dial-up",
-                "@input-methods",
-                "@standard",
+                @dial-up,
+                @input-methods,
+                @standard,
 
-                "gfs2-utils",
-                "reiserfs-utils",
+                gfs2-utils,
+                reiserfs-utils,
             ];
         }
 
         files {
             /root/.gtkrc-2.0 {
                 content = <<EOF
-include "/usr/share/themes/Adwaita/gtk-2.0/gtkrc"
-include "/etc/gtk-2.0/gtkrc"
-gtk-theme-name="Adwaita"
+include /usr/share/themes/Adwaita/gtk-2.0/gtkrc
+include /etc/gtk-2.0/gtkrc
+gtk-theme-name=Adwaita
 EOF
 
             /root/.config/gtk-3.0 {
@@ -63,4 +63,4 @@ EOF
     }
 }
 
-.include(duplicate="merge") "fedora.ucl" ;
+.include(duplicate=merge) fedora.ucl;

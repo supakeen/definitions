@@ -27,12 +27,12 @@ format {
     installer-live {
         packages {
             exclude = [
-                "@dial-up",
-                "@input-methods",
-                "@standard",
+                @dial-up,
+                @input-methods,
+                @standard,
  
-                "gfs2-utils",
-                "reiserfs-utils",
+                gfs2-utils,
+                reiserfs-utils,
            ];
         }
 
@@ -51,4 +51,4 @@ EOF;
     }
 }
 
-.include(duplicate="merge") "fedora.ucl" ;
+.include(duplicate=merge) fedora.ucl;
