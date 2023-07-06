@@ -7,9 +7,15 @@ filename = "installer.iso"
 
 [format.vhd]
 filename = "disk.vhd"
+filesize = 2000000000
 
 [format.qcow2]
 filename = "disk.qcow2"
+filesize = 5000000000
+
+[format.vmdk]
+filename = "disk.vmdk"
+filesize = 2000000000
 
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]
@@ -22,6 +28,10 @@ exclude = [ "dracut-config-rescue", "geolite2-city", "geolite2-country", "zram-g
 [format.qcow2.packages]
 include = [ "@Fedora Cloud Server", "chrony", "langpacks-en", "qemu-guest-agent",]
 exclude = [ "dracut-config-rescue", "firewalld", "geolite2-city", "geolite2-country", "plymouth",]
+
+[format.vmdk.packages]
+include = [ "@Fedora Cloud Server\"", "chrony", "systemd-udev", "langpacks-en", "open-vm-tools",]
+exclude = [ "dracut-config-rescue", "etables", "firewalld", "geolite2-city", "geolite2-country", "gobject-introspection", "plymouth", "zram-generator-defaults", "grubby-deprecated", "extlinux-bootloader",]
 
 [format.installer-live.files."/root/.gtkrc-2.0"]
 content = "include /usr/share/themes/Adwaita/gtk-2.0/gtkrc\ninclude /etc/gtk-2.0/gtkrc\ngtk-theme-name=Adwaita"

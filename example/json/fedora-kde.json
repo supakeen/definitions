@@ -77,6 +77,7 @@
     },
     "vhd": {
       "filename": "disk.vhd",
+      "filesize": 2000000000,
       "packages": {
         "include": [
           "@core",
@@ -109,6 +110,7 @@
     },
     "qcow2": {
       "filename": "disk.qcow2",
+      "filesize": 5000000000,
       "packages": {
         "include": [
           "@Fedora Cloud Server",
@@ -133,6 +135,31 @@
             "cloud-init-local.service"
           ]
         }
+      }
+    },
+    "vmdk": {
+      "filename": "disk.vmdk",
+      "filesize": 2000000000,
+      "packages": {
+        "include": [
+          "@Fedora Cloud Server\"",
+          "chrony",
+          "systemd-udev",
+          "langpacks-en",
+          "open-vm-tools"
+        ],
+        "exclude": [
+          "dracut-config-rescue",
+          "etables",
+          "firewalld",
+          "geolite2-city",
+          "geolite2-country",
+          "gobject-introspection",
+          "plymouth",
+          "zram-generator-defaults",
+          "grubby-deprecated",
+          "extlinux-bootloader"
+        ]
       }
     }
   }
