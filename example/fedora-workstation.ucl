@@ -1,0 +1,30 @@
+always {
+    packages {
+        include = [
+            "@workstation-product-environment"
+        ];
+    }
+}
+
+format {
+    installer-live {
+        packages {
+            exclude = [
+                "@dial-up",
+                "@input-methods",
+                "@standard",
+
+                "gfs2-utils",
+                "reiserfs-utils",
+            ];
+        }
+
+        files {
+            /etc/sysconfig/livesys {
+                content = 'livesys_session="gnome"'
+            }
+        }
+    }
+}
+
+.include(duplicate="merge") "fedora.ucl" ;

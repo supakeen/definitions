@@ -1,0 +1,52 @@
+always {
+    packages {
+        include = [
+            @kde-product-environment,
+            @firefox,
+            @kde-apps,
+            @kde-media,
+            @kde-pim,
+            @libreoffice,
+            libreoffice-draw,
+            libreoffice-math,
+            fedora-release-kde,
+            kde-l10n,
+            fuse,
+            mediawriter,
+        ];
+
+        exclude = [
+            @admin-tools,
+            tracker-miners,
+            tracker,
+            ktorrent,
+            digikam,
+            kipi-plugins,
+            krusader,
+            k3b,
+        ]
+    }
+}
+
+format {
+    installer-live {
+        packages {
+            exclude = [
+                "@dial-up",
+                "@input-methods",
+                "@standard",
+
+                "gfs2-utils",
+                "reiserfs-utils",
+            ];
+        }
+
+        files {
+            /etc/sysconfig/livesys {
+                content = 'livesys_session="kde"'
+            }
+        }
+    }
+}
+
+.include(duplicate="merge") "fedora.ucl" ;
