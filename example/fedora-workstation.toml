@@ -1,6 +1,9 @@
 [always.packages]
 include = [ "@workstation-product-environment",]
 
+[format.installer-live]
+filename = "installer.iso"
+
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]
 include = [ "kernel", "kernel-modules", "kernel-modules-extra", "anaconda", "anaconda-install-env-deps", "anaconda-live", "@anaconda-tools", "aajohan-comfortaa-fonts", "dracut-live", "glibc-all-langpacks", "livesys-scripts",]

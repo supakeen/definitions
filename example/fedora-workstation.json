@@ -37,6 +37,7 @@
           "content": "'livesys_session=\"gnome\"'"
         }
       },
+      "filename": "installer.iso",
       "systemd": {
         "services": {
           "enable": [

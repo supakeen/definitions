@@ -2,6 +2,9 @@
 include = [ "@kde-product-environment", "@firefox", "@kde-apps", "@kde-media", "@kde-pim", "@libreoffice", "libreoffice-draw", "libreoffice-math", "fedora-release-kde", "kde-l10n", "fuse", "mediawriter",]
 exclude = [ "@admin-tools", "tracker-miners", "tracker", "ktorrent", "digikam", "kipi-plugins", "krusader", "k3b",]
 
+[format.installer-live]
+filename = "installer.iso"
+
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]
 include = [ "kernel", "kernel-modules", "kernel-modules-extra", "anaconda", "anaconda-install-env-deps", "anaconda-live", "@anaconda-tools", "aajohan-comfortaa-fonts", "dracut-live", "glibc-all-langpacks", "livesys-scripts",]

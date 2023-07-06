@@ -1,6 +1,7 @@
 {
   "format": {
     "installer-live": {
+      "filename": "installer.iso",
       "packages": {
         "include": [
           "kernel",

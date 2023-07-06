@@ -24,6 +24,7 @@ always:
     - mediawriter
 format:
   installer-live:
+    filename: installer.iso
     files:
       /etc/sysconfig/livesys:
         content: '''livesys_session="kde"'''

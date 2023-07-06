@@ -1,5 +1,6 @@
 format:
   installer-live:
+    filename: installer.iso
     packages:
       exclude:
       - fcoe-utils
