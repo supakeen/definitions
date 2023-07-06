@@ -1,0 +1,54 @@
+always {
+    packages {
+        include = [
+            @xfce-desktop-environment,
+
+            @xfce-apps,
+            @xfce-extra-plugins,
+            @xfce-media,
+            @xfce-office,
+
+            wget,
+            system-config-printer,
+        ];
+
+        exclude = [
+            autofs,
+            acpid,
+            gimp-help,
+            desktop-backgrounds-basic,
+            xfce4-sensors-plugin,
+            xfce4-eyes-plugin,
+        ];
+    }
+}
+
+format {
+    installer-live {
+        packages {
+            exclude = [
+                "@dial-up",
+                "@input-methods",
+                "@standard",
+ 
+                "gfs2-utils",
+                "reiserfs-utils",
+           ];
+        }
+
+        files {
+            /etc/sysconfig/desktop {
+                content = <<EOF
+PREFERRED=/usr/bin/startxfce4
+DISPLAYMANAGER=/usr/sbin/lightdm
+EOF;
+            }
+
+            /etc/sysconfig/livesys {
+                content = 'livesys_session="xfce"'
+            }
+        }
+    }
+}
+
+.include(duplicate="merge") "fedora.ucl" ;
