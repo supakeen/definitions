@@ -1,6 +1,6 @@
 format {
     installer-live {
-        filename = "installer.iso"
+        filename = installer.iso;
 
         packages {
             include = [
@@ -34,6 +34,43 @@ format {
 
                     tmp.mount
                 ]
+            }
+        }
+    }
+
+    vhd {
+        filename = disk.vhd;
+
+        packages {
+            include = [
+                @core,
+                chrony
+                langpacks-en,
+                net-tools,
+                ntfsprogs,
+                libxcrypt-compat,
+                initscripts,
+                glibc-all-langpacks,
+            ];
+
+            exclude = [
+                dracut-config-rescue,
+                geolite2-city,
+                geolite2-country,
+                zram-generator-defaults,
+            ];
+        }
+
+        systemd {
+            services {
+                enable = [
+                    sshd.service,
+                ];
+
+                disable = [
+                    proc-sys-fs-binfmt_misc.mount,
+                    loadmodules.service,
+                ];
             }
         }
     }

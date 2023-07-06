@@ -35,3 +35,27 @@ format:
         - livesys.service
         - livesys-late.service
         - tmp.mount
+  vhd:
+    filename: disk.vhd
+    packages:
+      exclude:
+      - dracut-config-rescue
+      - geolite2-city
+      - geolite2-country
+      - zram-generator-defaults
+      include:
+      - '@core'
+      - chrony
+      - langpacks-en
+      - net-tools
+      - ntfsprogs
+      - libxcrypt-compat
+      - initscripts
+      - glibc-all-langpacks
+    systemd:
+      services:
+        disable:
+        - proc-sys-fs-binfmt_misc.mount
+        - loadmodules.service
+        enable:
+        - sshd.service
