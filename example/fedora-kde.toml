@@ -8,6 +8,9 @@ filename = "installer.iso"
 [format.vhd]
 filename = "disk.vhd"
 
+[format.qcow2]
+filename = "disk.qcow2"
+
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]
 include = [ "kernel", "kernel-modules", "kernel-modules-extra", "anaconda", "anaconda-install-env-deps", "anaconda-live", "@anaconda-tools", "aajohan-comfortaa-fonts", "dracut-live", "glibc-all-langpacks", "livesys-scripts",]
@@ -15,6 +18,10 @@ include = [ "kernel", "kernel-modules", "kernel-modules-extra", "anaconda", "ana
 [format.vhd.packages]
 include = [ "@core", "chrony", "langpacks-en", "net-tools", "ntfsprogs", "libxcrypt-compat", "initscripts", "glibc-all-langpacks",]
 exclude = [ "dracut-config-rescue", "geolite2-city", "geolite2-country", "zram-generator-defaults",]
+
+[format.qcow2.packages]
+include = [ "@Fedora Cloud Server", "chrony", "langpacks-en", "qemu-guest-agent",]
+exclude = [ "dracut-config-rescue", "firewalld", "geolite2-city", "geolite2-country", "plymouth",]
 
 [format.installer-live.files."/root/.gtkrc-2.0"]
 content = "include /usr/share/themes/Adwaita/gtk-2.0/gtkrc\ninclude /etc/gtk-2.0/gtkrc\ngtk-theme-name=Adwaita"
@@ -31,3 +38,6 @@ enable = [ "livesys.service", "livesys-late.service", "tmp.mount",]
 [format.vhd.systemd.services]
 enable = [ "sshd.service",]
 disable = [ "proc-sys-fs-binfmt_misc.mount", "loadmodules.service",]
+
+[format.qcow2.systemd.services]
+enable = [ "cloud-init.service", "cloud-config.service", "cloud-final.service", "cloud-init-local.service",]

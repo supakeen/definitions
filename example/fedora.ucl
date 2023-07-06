@@ -74,4 +74,37 @@ format {
             }
         }
     }
+
+    qcow2 {
+        filename = disk.qcow2;
+
+        packages = {
+            include = [
+                "@Fedora Cloud Server",
+                chrony,
+                langpacks-en,
+                qemu-guest-agent,
+            ];
+
+            exclude = [
+                dracut-config-rescue,
+                firewalld,
+                geolite2-city,
+                geolite2-country,
+                plymouth,
+            ];
+        }
+
+        systemd {
+            services {
+                enable = [
+                    cloud-init.service,
+                    cloud-config.service,
+                    cloud-final.service,
+                    cloud-init-local.service,
+                ];
+            }
+        }
+
+    }
 }
