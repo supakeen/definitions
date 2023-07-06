@@ -11,13 +11,18 @@ def main():
     for path in pathlib.Path(".").glob("*.ucl"):
         name, _ = path.name.split(".", 1)
 
-        with open(path) as file_ucl, open(f"json/{name}.json", "w") as file_json, open(f"toml/{name}.toml", "w") as file_toml, open(f"yaml/{name}.yaml", "w") as file_yaml:
+        with open(path) as file_ucl, open(
+            f"json/{name}.json", "w"
+        ) as file_json, open(f"toml/{name}.toml", "w") as file_toml, open(
+            f"yaml/{name}.yaml", "w"
+        ) as file_yaml:
             data = ucl.load(file_ucl.read())
             json.dump(data, file_json, indent=2)
             toml.dump(data, file_toml)
             yaml.dump(data, file_yaml)
 
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
