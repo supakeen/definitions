@@ -35,50 +35,42 @@
           "@input-methods",
           "@standard",
           "gfs2-utils",
-          "reiserfs-utils"
+          "reiserfs-utils",
+          "fcoe-utils",
+          "device-mapper-multipath"
+        ],
+        "include": [
+          "kernel",
+          "kernel-modules",
+          "kernel-modules-extra",
+          "anaconda",
+          "anaconda-install-env-deps",
+          "anaconda-live",
+          "@anaconda-tools",
+          "aajohan-comfortaa-fonts",
+          "dracut-live",
+          "glibc-all-langpacks",
+          "livesys-scripts"
         ]
       },
       "files": {
         "/root/.gtkrc-2.0": {
-          "content": "include /usr/share/themes/Adwaita/gtk-2.0/gtkrc\ninclude /etc/gtk-2.0/gtkrc\ngtk-theme-name=Adwaita",
-          "/root/.config/gtk-3.0": {
-            "content": "[Settings]\ngtk-theme-name = Adwaita"
-          },
-          "/etc/sysconfig/livesys": {
-            "content": "'livesys_session=\"kde\"'"
-          }
-        }
-      }
-    },
-    "format": {
-      "installer-live": {
-        "packages": {
-          "include": [
-            "kernel",
-            "kernel-modules",
-            "kernel-modules-extra",
-            "anaconda",
-            "anaconda-install-env-deps",
-            "anaconda-live",
-            "@anaconda-tools",
-            "aajohan-comfortaa-fonts",
-            "dracut-live",
-            "glibc-all-langpacks",
-            "livesys-scripts"
-          ],
-          "exclude": [
-            "fcoe-utils",
-            "device-mapper-multipath"
-          ]
+          "content": "include /usr/share/themes/Adwaita/gtk-2.0/gtkrc\ninclude /etc/gtk-2.0/gtkrc\ngtk-theme-name=Adwaita"
         },
-        "systemd": {
-          "services": {
-            "enable": [
-              "livesys.service",
-              "livesys-late.service",
-              "tmp.mount"
-            ]
-          }
+        "/root/.config/gtk-3.0": {
+          "content": "[Settings]\ngtk-theme-name = Adwaita"
+        },
+        "/etc/sysconfig/livesys": {
+          "content": "'livesys_session=\"kde\"'"
+        }
+      },
+      "systemd": {
+        "services": {
+          "enable": [
+            "livesys.service",
+            "livesys-late.service",
+            "tmp.mount"
+          ]
         }
       }
     }

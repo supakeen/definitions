@@ -23,39 +23,15 @@ always:
     - fuse
     - mediawriter
 format:
-  format:
-    installer-live:
-      packages:
-        exclude:
-        - fcoe-utils
-        - device-mapper-multipath
-        include:
-        - kernel
-        - kernel-modules
-        - kernel-modules-extra
-        - anaconda
-        - anaconda-install-env-deps
-        - anaconda-live
-        - '@anaconda-tools'
-        - aajohan-comfortaa-fonts
-        - dracut-live
-        - glibc-all-langpacks
-        - livesys-scripts
-      systemd:
-        services:
-          enable:
-          - livesys.service
-          - livesys-late.service
-          - tmp.mount
   installer-live:
     files:
-      /root/.gtkrc-2.0:
-        /etc/sysconfig/livesys:
-          content: '''livesys_session="kde"'''
-        /root/.config/gtk-3.0:
-          content: '[Settings]
+      /etc/sysconfig/livesys:
+        content: '''livesys_session="kde"'''
+      /root/.config/gtk-3.0:
+        content: '[Settings]
 
-            gtk-theme-name = Adwaita'
+          gtk-theme-name = Adwaita'
+      /root/.gtkrc-2.0:
         content: 'include /usr/share/themes/Adwaita/gtk-2.0/gtkrc
 
           include /etc/gtk-2.0/gtkrc
@@ -68,3 +44,23 @@ format:
       - '@standard'
       - gfs2-utils
       - reiserfs-utils
+      - fcoe-utils
+      - device-mapper-multipath
+      include:
+      - kernel
+      - kernel-modules
+      - kernel-modules-extra
+      - anaconda
+      - anaconda-install-env-deps
+      - anaconda-live
+      - '@anaconda-tools'
+      - aajohan-comfortaa-fonts
+      - dracut-live
+      - glibc-all-langpacks
+      - livesys-scripts
+    systemd:
+      services:
+        enable:
+        - livesys.service
+        - livesys-late.service
+        - tmp.mount
