@@ -1,0 +1,68 @@
+{
+  "always": {
+    "packages": {
+      "include": [
+        "@xfce-desktop-environment",
+        "@xfce-apps",
+        "@xfce-extra-plugins",
+        "@xfce-media",
+        "@xfce-office",
+        "wget",
+        "system-config-printer"
+      ],
+      "exclude": [
+        "autofs",
+        "acpid",
+        "gimp-help",
+        "desktop-backgrounds-basic",
+        "xfce4-sensors-plugin",
+        "xfce4-eyes-plugin"
+      ]
+    }
+  },
+  "format": {
+    "installer-live": {
+      "packages": {
+        "exclude": [
+          "@dial-up",
+          "@input-methods",
+          "@standard",
+          "gfs2-utils",
+          "reiserfs-utils",
+          "fcoe-utils",
+          "device-mapper-multipath"
+        ],
+        "include": [
+          "kernel",
+          "kernel-modules",
+          "kernel-modules-extra",
+          "anaconda",
+          "anaconda-install-env-deps",
+          "anaconda-live",
+          "@anaconda-tools",
+          "aajohan-comfortaa-fonts",
+          "dracut-live",
+          "glibc-all-langpacks",
+          "livesys-scripts"
+        ]
+      },
+      "files": {
+        "/etc/sysconfig/desktop": {
+          "content": "PREFERRED=/usr/bin/startxfce4\nDISPLAYMANAGER=/usr/sbin/lightdm"
+        },
+        "/etc/sysconfig/livesys": {
+          "content": "'livesys_session=\"xfce\"'"
+        }
+      },
+      "systemd": {
+        "services": {
+          "enable": [
+            "livesys.service",
+            "livesys-late.service",
+            "tmp.mount"
+          ]
+        }
+      }
+    }
+  }
+}

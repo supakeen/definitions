@@ -1,0 +1,34 @@
+{
+  "format": {
+    "installer-live": {
+      "packages": {
+        "include": [
+          "kernel",
+          "kernel-modules",
+          "kernel-modules-extra",
+          "anaconda",
+          "anaconda-install-env-deps",
+          "anaconda-live",
+          "@anaconda-tools",
+          "aajohan-comfortaa-fonts",
+          "dracut-live",
+          "glibc-all-langpacks",
+          "livesys-scripts"
+        ],
+        "exclude": [
+          "fcoe-utils",
+          "device-mapper-multipath"
+        ]
+      },
+      "systemd": {
+        "services": {
+          "enable": [
+            "livesys.service",
+            "livesys-late.service",
+            "tmp.mount"
+          ]
+        }
+      }
+    }
+  }
+}
