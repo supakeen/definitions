@@ -6,24 +6,6 @@ always {
     }
 }
 
-format {
-    qcow2 {
-        filename = fedora-cloud.qcow2;
-    }
-
-    vmdk {
-        filename = fedora-cloud.vmdk;
-    }
-
-    vdk {
-        filename = fedora-cloud.vdk;
-    }
-
-    ova {
-        filename = fedora-cloud.ova;
-    }
-}
-
 outputs {
     fedora-cloud-x86_64-qcow2 {
         filename = fedora-cloud-x86_64.iso;

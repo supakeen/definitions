@@ -2,24 +2,38 @@
 include = [ "@kde-product-environment", "@firefox", "@kde-apps", "@kde-media", "@kde-pim", "@libreoffice", "libreoffice-draw", "libreoffice-math", "fedora-release-kde", "kde-l10n", "fuse", "mediawriter",]
 exclude = [ "@admin-tools", "tracker-miners", "tracker", "ktorrent", "digikam", "kipi-plugins", "krusader", "k3b",]
 
-[format.installer-live]
-filename = "fedora-kde.iso"
-
 [format.vhd]
-filename = "disk.vhd"
 filesize = 2147483648
 
 [format.qcow2]
-filename = "disk.qcow2"
 filesize = 5368709120
 
 [format.vmdk]
-filename = "disk.vmdk"
 filesize = 2147483648
 
 [format.ova]
-filename = "disk.ova"
 filesize = 2147483648
+
+[outputs.fedora-kde-x86_64-live]
+filename = "fedora-kde-x86_64.iso"
+format = "live-installer"
+architecture = "x86_64"
+
+[outputs.fedora-kde-aarch64-live]
+filename = "fedora-kde-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
+
+[outputs.fedora-kde-aarch64-rpi-live]
+filename = "fedora-kde-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
+platform = "rpi"
+
+[outputs.fedora-kde-ppc64le-live]
+filename = "fedora-kde-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
 
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]

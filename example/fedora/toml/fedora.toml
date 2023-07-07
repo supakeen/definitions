@@ -1,20 +1,13 @@
-[format.installer-live]
-filename = "installer.iso"
-
 [format.vhd]
-filename = "disk.vhd"
 filesize = 2147483648
 
 [format.qcow2]
-filename = "disk.qcow2"
 filesize = 5368709120
 
 [format.vmdk]
-filename = "disk.vmdk"
 filesize = 2147483648
 
 [format.ova]
-filename = "disk.ova"
 filesize = 2147483648
 
 [format.installer-live.packages]

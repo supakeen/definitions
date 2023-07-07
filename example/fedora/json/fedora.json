@@ -1,7 +1,6 @@
 {
   "format": {
     "installer-live": {
-      "filename": "installer.iso",
       "packages": {
         "include": [
           "kernel",
@@ -32,7 +31,6 @@
       }
     },
     "vhd": {
-      "filename": "disk.vhd",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -65,7 +63,6 @@
       }
     },
     "qcow2": {
-      "filename": "disk.qcow2",
       "filesize": 5368709120,
       "packages": {
         "include": [
@@ -93,7 +90,6 @@
       }
     },
     "vmdk": {
-      "filename": "disk.vmdk",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -117,7 +113,6 @@
       }
     },
     "ova": {
-      "filename": "disk.ova",
       "filesize": 2147483648,
       "packages": {
         "include": [

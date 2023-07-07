@@ -66,7 +66,6 @@
       }
     },
     "vhd": {
-      "filename": "disk.vhd",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -99,7 +98,6 @@
       }
     },
     "qcow2": {
-      "filename": "disk.qcow2",
       "filesize": 5368709120,
       "packages": {
         "include": [
@@ -127,7 +125,6 @@
       }
     },
     "vmdk": {
-      "filename": "disk.vmdk",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -151,7 +148,6 @@
       }
     },
     "ova": {
-      "filename": "disk.ova",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -173,6 +169,29 @@
           "extlinux-bootloader"
         ]
       }
+    }
+  },
+  "outputs": {
+    "fedora-xfce-x86_64-live": {
+      "filename": "fedora-xfce-x86_64.iso",
+      "format": "live-installer",
+      "architecture": "x86_64"
+    },
+    "fedora-xfce-aarch64-live": {
+      "filename": "fedora-xfce-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64"
+    },
+    "fedora-xfce-aarch64-rpi-live": {
+      "filename": "fedora-xfce-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64",
+      "platform": "rpi"
+    },
+    "fedora-xfce-ppc64le-live": {
+      "filename": "fedora-xfce-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64"
     }
   }
 }

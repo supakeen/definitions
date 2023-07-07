@@ -29,7 +29,6 @@
   },
   "format": {
     "installer-live": {
-      "filename": "fedora-kde.iso",
       "packages": {
         "exclude": [
           "@dial-up",
@@ -76,7 +75,6 @@
       }
     },
     "vhd": {
-      "filename": "disk.vhd",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -109,7 +107,6 @@
       }
     },
     "qcow2": {
-      "filename": "disk.qcow2",
       "filesize": 5368709120,
       "packages": {
         "include": [
@@ -137,7 +134,6 @@
       }
     },
     "vmdk": {
-      "filename": "disk.vmdk",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -161,7 +157,6 @@
       }
     },
     "ova": {
-      "filename": "disk.ova",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -183,6 +178,29 @@
           "extlinux-bootloader"
         ]
       }
+    }
+  },
+  "outputs": {
+    "fedora-kde-x86_64-live": {
+      "filename": "fedora-kde-x86_64.iso",
+      "format": "live-installer",
+      "architecture": "x86_64"
+    },
+    "fedora-kde-aarch64-live": {
+      "filename": "fedora-kde-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64"
+    },
+    "fedora-kde-aarch64-rpi-live": {
+      "filename": "fedora-kde-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64",
+      "platform": "rpi"
+    },
+    "fedora-kde-ppc64le-live": {
+      "filename": "fedora-kde-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64"
     }
   }
 }

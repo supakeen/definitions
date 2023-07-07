@@ -38,7 +38,6 @@
           "content": "'livesys_session=\"gnome\"'"
         }
       },
-      "filename": "installer.iso",
       "systemd": {
         "services": {
           "enable": [
@@ -50,7 +49,6 @@
       }
     },
     "vhd": {
-      "filename": "disk.vhd",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -83,7 +81,6 @@
       }
     },
     "qcow2": {
-      "filename": "disk.qcow2",
       "filesize": 5368709120,
       "packages": {
         "include": [
@@ -111,7 +108,6 @@
       }
     },
     "vmdk": {
-      "filename": "disk.vmdk",
       "filesize": 2147483648,
       "packages": {
         "include": [
@@ -135,7 +131,6 @@
       }
     },
     "ova": {
-      "filename": "disk.ova",
       "filesize": 2147483648,
       "packages": {
         "include": [

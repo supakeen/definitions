@@ -1,7 +1,5 @@
 format {
     installer-live {
-        filename = installer.iso;
-
         packages {
             include = [
                 kernel,
@@ -39,7 +37,6 @@ format {
     }
 
     vhd {
-        filename = disk.vhd;
         filesize = 2Gb
 
         packages {
@@ -77,7 +74,6 @@ format {
     }
 
     qcow2 {
-        filename = disk.qcow2;
         filesize = 5Gb
 
         packages = {
@@ -110,7 +106,6 @@ format {
     }
 
     vmdk {
-        filename = disk.vmdk;
         filesize = 2Gb
 
         packages = {
@@ -137,7 +132,6 @@ format {
     }
 
     ova {
-        filename = disk.ova;
         filesize = 2Gb
 
         packages = {
@@ -162,5 +156,4 @@ format {
             ];
         }
     }
-
 }

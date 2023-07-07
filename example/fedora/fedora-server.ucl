@@ -6,24 +6,6 @@ always {
     }
 }
 
-format {
-    qcow2 {
-        filename = fedora-server.qcow2;
-    }
-
-    vmdk {
-        filename = fedora-server.vmdk;
-    }
-
-    vdk {
-        filename = fedora-server.vdk;
-    }
-
-    ova {
-        filename = fedora-server.ova;
-    }
-}
-
 outputs {
     fedora-server-x86_64-qcow2 {
         filename = fedora-server-x86_64.iso;

@@ -4,7 +4,6 @@ always:
     - '@Fedora Cloud Server'
 format:
   installer-live:
-    filename: installer.iso
     packages:
       exclude:
       - fcoe-utils
@@ -28,7 +27,6 @@ format:
         - livesys-late.service
         - tmp.mount
   ova:
-    filename: fedora-cloud.ova
     filesize: 2147483648
     packages:
       exclude:
@@ -48,7 +46,6 @@ format:
       - langpacks-en
       - open-vm-tools
   qcow2:
-    filename: fedora-cloud.qcow2
     filesize: 5368709120
     packages:
       exclude:
@@ -68,10 +65,7 @@ format:
         - cloud-config.service
         - cloud-final.service
         - cloud-init-local.service
-  vdk:
-    filename: fedora-cloud.vdk
   vhd:
-    filename: disk.vhd
     filesize: 2147483648
     packages:
       exclude:
@@ -96,7 +90,6 @@ format:
         enable:
         - sshd.service
   vmdk:
-    filename: fedora-cloud.vmdk
     filesize: 2147483648
     packages:
       exclude:

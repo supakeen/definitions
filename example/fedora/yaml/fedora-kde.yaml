@@ -24,7 +24,6 @@ always:
     - mediawriter
 format:
   installer-live:
-    filename: fedora-kde.iso
     files:
       /etc/sysconfig/livesys:
         content: '''livesys_session="kde"'''
@@ -66,7 +65,6 @@ format:
         - livesys-late.service
         - tmp.mount
   ova:
-    filename: disk.ova
     filesize: 2147483648
     packages:
       exclude:
@@ -86,7 +84,6 @@ format:
       - langpacks-en
       - open-vm-tools
   qcow2:
-    filename: disk.qcow2
     filesize: 5368709120
     packages:
       exclude:
@@ -107,7 +104,6 @@ format:
         - cloud-final.service
         - cloud-init-local.service
   vhd:
-    filename: disk.vhd
     filesize: 2147483648
     packages:
       exclude:
@@ -132,7 +128,6 @@ format:
         enable:
         - sshd.service
   vmdk:
-    filename: disk.vmdk
     filesize: 2147483648
     packages:
       exclude:
@@ -151,3 +146,21 @@ format:
       - systemd-udev
       - langpacks-en
       - open-vm-tools
+outputs:
+  fedora-kde-aarch64-live:
+    architecture: aarch64
+    filename: fedora-kde-aarch64.iso
+    format: live-installer
+  fedora-kde-aarch64-rpi-live:
+    architecture: aarch64
+    filename: fedora-kde-aarch64.iso
+    format: live-installer
+    platform: rpi
+  fedora-kde-ppc64le-live:
+    architecture: aarch64
+    filename: fedora-kde-aarch64.iso
+    format: live-installer
+  fedora-kde-x86_64-live:
+    architecture: x86_64
+    filename: fedora-kde-x86_64.iso
+    format: live-installer

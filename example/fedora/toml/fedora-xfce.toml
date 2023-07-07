@@ -6,20 +6,37 @@ exclude = [ "autofs", "acpid", "gimp-help", "desktop-backgrounds-basic", "xfce4-
 filename = "fedora-xfce.iso"
 
 [format.vhd]
-filename = "disk.vhd"
 filesize = 2147483648
 
 [format.qcow2]
-filename = "disk.qcow2"
 filesize = 5368709120
 
 [format.vmdk]
-filename = "disk.vmdk"
 filesize = 2147483648
 
 [format.ova]
-filename = "disk.ova"
 filesize = 2147483648
+
+[outputs.fedora-xfce-x86_64-live]
+filename = "fedora-xfce-x86_64.iso"
+format = "live-installer"
+architecture = "x86_64"
+
+[outputs.fedora-xfce-aarch64-live]
+filename = "fedora-xfce-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
+
+[outputs.fedora-xfce-aarch64-rpi-live]
+filename = "fedora-xfce-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
+platform = "rpi"
+
+[outputs.fedora-xfce-ppc64le-live]
+filename = "fedora-xfce-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
 
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]
