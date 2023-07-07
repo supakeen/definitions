@@ -54,6 +54,5 @@ outputs {
         architecture = x86_64;
         platform = azure;
     }
-
 }
 .include(duplicate=merge) ./fedora.ucl;

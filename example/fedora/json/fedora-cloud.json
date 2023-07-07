@@ -150,5 +150,29 @@
         }
       }
     }
+  },
+  "outputs": {
+    "fedora-cloud-x86_64-qcow2": {
+      "filename": "fedora-cloud-x86_64.iso",
+      "format": "qcow2",
+      "architecture": "x86_64"
+    },
+    "fedora-cloud-aarch64-qcow2": {
+      "filename": "fedora-cloud-aarch64.iso",
+      "format": "qcow2",
+      "architecture": "aarch64"
+    },
+    "fedora-cloud-x86_64-ami": {
+      "filename": "fedora-cloud-x86_64-ami.raw",
+      "format": "qcow2",
+      "architecture": "x86_64",
+      "platform": "ami"
+    },
+    "fedora-cloud-x86_64-azure": {
+      "filename": "fedora-cloud-x86_64-azure.raw",
+      "format": "qcow2",
+      "architecture": "x86_64",
+      "platform": "azure"
+    }
   }
 }

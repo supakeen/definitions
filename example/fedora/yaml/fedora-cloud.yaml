@@ -115,3 +115,22 @@ format:
       - systemd-udev
       - langpacks-en
       - open-vm-tools
+outputs:
+  fedora-cloud-aarch64-qcow2:
+    architecture: aarch64
+    filename: fedora-cloud-aarch64.iso
+    format: qcow2
+  fedora-cloud-x86_64-ami:
+    architecture: x86_64
+    filename: fedora-cloud-x86_64-ami.raw
+    format: qcow2
+    platform: ami
+  fedora-cloud-x86_64-azure:
+    architecture: x86_64
+    filename: fedora-cloud-x86_64-azure.raw
+    format: qcow2
+    platform: azure
+  fedora-cloud-x86_64-qcow2:
+    architecture: x86_64
+    filename: fedora-cloud-x86_64.iso
+    format: qcow2
