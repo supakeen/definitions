@@ -24,4 +24,36 @@ format {
     }
 }
 
+outputs {
+    fedora-server-x86_64-qcow2 {
+        filename = fedora-server-x86_64.iso;
+
+        format = qcow2;
+        architecture = x86_64;
+    }
+
+    fedora-server-aarch64-qcow2 {
+        filename = fedora-server-aarch64.iso;
+
+        format = qcow2;
+        architecture = aarch64;
+    }
+
+    fedora-server-x86_64-ami {
+        filename = fedora-server-x86_64-ami.raw;
+
+        format = qcow2;
+        architecture = x86_64;
+        platform = ami;
+    }
+
+    fedora-server-x86_64-azure {
+        filename = fedora-server-x86_64-azure.raw;
+
+        format = qcow2;
+        architecture = x86_64;
+        platform = azure;
+    }
+
+}
 .include(duplicate=merge) ./fedora.ucl;
