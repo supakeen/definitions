@@ -1,5 +1,6 @@
 {
   "always": {
+    "hostname": "fedora-workstation",
     "packages": {
       "include": [
         "@workstation-product-environment"
@@ -8,7 +9,6 @@
   },
   "format": {
     "installer-live": {
-      "filename": "fedora-workstation.iso",
       "packages": {
         "exclude": [
           "@dial-up",
@@ -38,6 +38,7 @@
           "content": "'livesys_session=\"gnome\"'"
         }
       },
+      "filename": "installer.iso",
       "systemd": {
         "services": {
           "enable": [
@@ -156,6 +157,29 @@
           "extlinux-bootloader"
         ]
       }
+    }
+  },
+  "outputs": {
+    "fedora-workstation-x86_64-live": {
+      "filename": "fedora-workstation-x86_64.iso",
+      "format": "live-installer",
+      "architecture": "x86_64"
+    },
+    "fedora-workstation-aarch64-live": {
+      "filename": "fedora-workstation-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64"
+    },
+    "fedora-workstation-aarch64-rpi-live": {
+      "filename": "fedora-workstation-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64",
+      "platform": "rpi"
+    },
+    "fedora-workstation-ppc64le-live": {
+      "filename": "fedora-workstation-aarch64.iso",
+      "format": "live-installer",
+      "architecture": "aarch64"
     }
   }
 }

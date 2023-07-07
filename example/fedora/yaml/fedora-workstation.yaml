@@ -1,10 +1,11 @@
 always:
+  hostname: fedora-workstation
   packages:
     include:
     - '@workstation-product-environment'
 format:
   installer-live:
-    filename: fedora-workstation.iso
+    filename: installer.iso
     files:
       /etc/sysconfig/livesys:
         content: '''livesys_session="gnome"'''
@@ -121,3 +122,21 @@ format:
       - systemd-udev
       - langpacks-en
       - open-vm-tools
+outputs:
+  fedora-workstation-aarch64-live:
+    architecture: aarch64
+    filename: fedora-workstation-aarch64.iso
+    format: live-installer
+  fedora-workstation-aarch64-rpi-live:
+    architecture: aarch64
+    filename: fedora-workstation-aarch64.iso
+    format: live-installer
+    platform: rpi
+  fedora-workstation-ppc64le-live:
+    architecture: aarch64
+    filename: fedora-workstation-aarch64.iso
+    format: live-installer
+  fedora-workstation-x86_64-live:
+    architecture: x86_64
+    filename: fedora-workstation-x86_64.iso
+    format: live-installer

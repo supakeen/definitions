@@ -1,8 +1,11 @@
+[always]
+hostname = "fedora-workstation"
+
 [always.packages]
 include = [ "@workstation-product-environment",]
 
 [format.installer-live]
-filename = "fedora-workstation.iso"
+filename = "installer.iso"
 
 [format.vhd]
 filename = "disk.vhd"
@@ -19,6 +22,27 @@ filesize = 2147483648
 [format.ova]
 filename = "disk.ova"
 filesize = 2147483648
+
+[outputs.fedora-workstation-x86_64-live]
+filename = "fedora-workstation-x86_64.iso"
+format = "live-installer"
+architecture = "x86_64"
+
+[outputs.fedora-workstation-aarch64-live]
+filename = "fedora-workstation-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
+
+[outputs.fedora-workstation-aarch64-rpi-live]
+filename = "fedora-workstation-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
+platform = "rpi"
+
+[outputs.fedora-workstation-ppc64le-live]
+filename = "fedora-workstation-aarch64.iso"
+format = "live-installer"
+architecture = "aarch64"
 
 [format.installer-live.packages]
 exclude = [ "@dial-up", "@input-methods", "@standard", "gfs2-utils", "reiserfs-utils", "fcoe-utils", "device-mapper-multipath",]

@@ -1,4 +1,13 @@
+# This is an example configuration file for a proposal to redo blueprints in
+# osbuild-composer to blueprints-ng. These blueprints are much closer to
+# definitions.
+
+# Take note of the `outputs` section near the end.
+
+# These are customizations that apply to any format, architecture, or platform.
 always {
+    hostname = fedora-workstation;
+
     packages {
         include = [
             @workstation-product-environment
@@ -8,8 +17,6 @@ always {
 
 format {
     installer-live {
-        filename = fedora-workstation.iso;
-
         packages {
             exclude = [
                 @dial-up,
@@ -21,12 +28,49 @@ format {
             ];
         }
 
+        # This is what used to live in the `customizations` section of a TOML
+        # blueprint.
         files {
             /etc/sysconfig/livesys {
                 content = 'livesys_session="gnome"'
             }
         }
     }
+}
+
+# Blueprints now define their outputs separately. Passing this blueprint to
+# a client will generally build all outputs, unless otherwise specified to
+# the client.
+outputs {
+    fedora-workstation-x86_64-live {
+        filename = fedora-workstation-x86_64.iso;
+
+        format = live-installer;
+        architecture = x86_64;
+    }
+
+    fedora-workstation-aarch64-live {
+        filename = fedora-workstation-aarch64.iso;
+
+        format = live-installer;
+        architecture = aarch64;
+    }
+
+    fedora-workstation-aarch64-rpi-live {
+        filename = fedora-workstation-aarch64.iso;
+
+        format = live-installer;
+        architecture = aarch64;
+        platform = rpi;
+    }
+
+    fedora-workstation-ppc64le-live {
+        filename = fedora-workstation-aarch64.iso;
+
+        format = live-installer;
+        architecture = aarch64;
+    }
+
 }
 
 .include(duplicate=merge) ./fedora.ucl;
